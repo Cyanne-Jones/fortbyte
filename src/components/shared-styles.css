@@ -1,0 +1,8 @@
+.yellow-gradient {
+  background: linear-gradient(#EDD63A, #EBB62E);
+  border-radius: 1rem;
+}
+
+.blue-font {
+  color: #0A3C9F;
+}

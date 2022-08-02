@@ -1,3 +1,36 @@
 .App {
   text-align: center;
 }
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0px;
+}
+
+nav {
+  padding: 1rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  margin: 3rem;
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.yellow-gradient {
+  background: linear-gradient(#EDD63A, #EBB62E);
+  border-radius: 1rem;
+  color: #0A3C9F;
+}
