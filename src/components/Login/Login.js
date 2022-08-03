@@ -53,7 +53,7 @@ const Login = () => {
             className="login-button blue-gradient box-shadow text-drop-shadow"
             onClick={logUserIn}
             >
-            LEMME SEE THOSE STATS
+            LEMME SEE THOSE STATS!
             </button>
       </form>
     </div>
