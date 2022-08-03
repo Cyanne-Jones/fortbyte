@@ -16,8 +16,8 @@ function App() {
     .then(res => {
       const newItems = res.data.br.motds.map(item => ({...item, isFavorited: false}))
       setNewsItems(newItems)
-      .catch(error => console.log(error))
-    });
+    })
+    .catch(error => console.log(error));
   }, []);
 
   return (
