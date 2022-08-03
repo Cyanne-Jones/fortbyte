@@ -9,8 +9,8 @@ describe('Stats page', () => {
   });
 
   it("Should contain a login form when user navigates to the stats page", () => {
-    cy.contains("Enter an Epic Username")
-    cy.get("form").contains("LEMME SEE THOSE STATS")
+    cy.contains("Enter an Epic Username");
+    cy.get("form").contains("LEMME SEE THOSE STATS");
   });
 
   it("Should let a user login with an Epic Games username", () => {
@@ -39,5 +39,13 @@ describe('Stats page', () => {
     cy.get("input").type("invalid-username");
     cy.get(".login-button").click();
     cy.contains("Looks like you've entered an invalid username!")
+  });
+
+  it("Should let you go back and enter another username from the stats page", () => {
+    cy.get("input").type("hails8n666");
+    cy.get(".login-button").click();
+    cy.get(".try-again-button").click();
+    cy.contains("Enter an Epic Username");
+    cy.get("form").contains("LEMME SEE THOSE STATS");
   });
 });
