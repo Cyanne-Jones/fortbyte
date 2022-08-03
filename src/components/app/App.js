@@ -11,20 +11,20 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>FORTBYTE</h1>
+        <h1 className="text-drop-shadow">FORTBYTE</h1>
         <nav>
           <NavLink to="/" className={({isActive}) => 
-            (isActive ? "yellow-gradient blue-font" : "")}
+            (isActive ? "yellow-gradient blue-font text-drop-shadow" : "text-drop-shadow")}
           >
             News
           </NavLink>
           <NavLink to="stats" className={({isActive}) => 
-            (isActive ? "yellow-gradient blue-font" : "")}
+            (isActive ? "yellow-gradient blue-font text-drop-shadow" : "text-drop-shadow")}
           >
             Stats
           </NavLink>
           <NavLink to="shop" className={({isActive}) => 
-            (isActive ? "yellow-gradient blue-font" : "")}
+            (isActive ? "yellow-gradient blue-font text-drop-shadow" : "text-drop-shadow")}
           >
             Item shop
           </NavLink>

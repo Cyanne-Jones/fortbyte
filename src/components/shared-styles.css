@@ -6,3 +6,7 @@
 .blue-font {
   color: #0A3C9F;
 }
+
+.text-drop-shadow {
+  text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
+}
