@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import useDataStore from "../hooks/useDataStore";
 import '../shared-styles.css';
 import "./Login.css"
+import { fetchUserStats } from "../apiCalls"
 
 const Login = () => {
   const setUserStats = useDataStore((state) => state.setUserStats)
@@ -16,19 +17,7 @@ const Login = () => {
   const logUserIn = (event) => {
     event.preventDefault();
     setError('')
-    fetch(`https://fortnite-api.com/v2/stats/br/v2?name=${userInput}`, {
-      headers: {
-        Authorization: process.env.REACT_APP_API_KEY
-      }
-    })
-    .then(res => {
-      if(res.status === 200) {
-        return res.json()
-      }
-      else if (res.status === 400) {
-        throw new Error("Invalid username, try again")
-      }
-    })
+    fetchUserStats(userInput)
     .then(res => {
       setUserName(userInput)
       setUserStats(res.data.stats.all)})

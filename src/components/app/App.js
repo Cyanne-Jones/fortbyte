@@ -6,7 +6,7 @@ import Stats from "../stats/Stats";
 import ItemShop from "../item-shop/ItemShop";
 import useDataStore from "../hooks/useDataStore";
 import { useEffect, useState } from 'react';
-import fetchData from "../apiCalls"
+import { fetchData } from "../apiCalls"
 
 function App() {
   const setNewsItems = useDataStore((state) => state.setNewsItems);
