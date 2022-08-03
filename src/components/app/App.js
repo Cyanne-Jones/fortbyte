@@ -54,6 +54,7 @@ function App() {
         </nav>
       </header>
       <Routes>
+      <Route path="*" element={<p>Page not found!</p>} />
         <Route exact path="/" element={<News />} />
         <Route exact path="stats" element={<Stats />} />
         <Route exact path="shop" element={<ItemShop />} />

@@ -53,4 +53,9 @@ describe('News/Home', () => {
     });
     cy.contains("Oh no, something went wrong!");
   });
+
+  it("Should show an error message when user goes to a page that doesn't exist", () => {
+    cy.visit("localhost:3000/invalid")
+    cy.contains("Page not found!")
+  });
 });
