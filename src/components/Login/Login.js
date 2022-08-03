@@ -41,8 +41,8 @@ const Login = () => {
 
   return (
     <div className="login yellow-gradient box-shadow">
-      <h2 className="blue-gradient box-shadow">Enter an Epic Username</h2>
-      {error ? <p>"Looks like you've entered an invalid username!"</p> : ''}
+      <h2 className="epic-name blue-gradient box-shadow">Enter an Epic Username</h2>
+      {error ? <p className="error">"Looks like you've entered an invalid username!"</p> : ''}
       <form>
         <input
           type="text"
