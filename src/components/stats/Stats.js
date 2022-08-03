@@ -1,11 +1,16 @@
 import React from "react";
 import useDataStore from "../hooks/useDataStore";
+import Login from "../login/Login.js";
 
 const Stats = () => {
-  console.log(process.env.REACT_APP_API_KEY)
+
+  const userName = useDataStore((state) => state.userName)
 
   return (
-    <h1>STATS</h1>
+    <div>
+      <h1>STATS</h1>
+      {userName ? <h1>Stataroos</h1> : <Login /> }
+    </div>
   )
 };
 
