@@ -19,7 +19,10 @@ const NewsItem = ({item}) => {
       </div>
       <div className="news-body">
         <p className="news-text">{item.body}</p>
-        <img src={item.image} alt="news image"/>
+        <img className="news-image" 
+          src={item.image} 
+          alt="news image"
+        />
       </div>
     </div>
   )
