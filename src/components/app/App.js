@@ -16,7 +16,10 @@ function App() {
   useEffect(() => {
     fetch('https://fortnite-api.com/v2/news')
     .then(res => res.json())
-    .then(res => setNewsItems(res.data.br.motds))
+    .then(res => {
+      const newItems = res.data.br.motds.map(item => ({...item, isFavorited: false}))
+      setNewsItems(newItems)
+    })
   }, []);
 
   return (
