@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import useDataStore from "../hooks/useDataStore";
+import '../shared-styles.css';
+import "./Login.css"
 
 const Login = () => {
   const setUserStats = useDataStore((state) => state.setUserStats)
@@ -24,8 +26,8 @@ const Login = () => {
   }
 
   return (
-    <div className="login">
-      <h2>Enter an Epic Username</h2>
+    <div className="login yellow-gradient box-shadow">
+      <h2 className="blue-gradient box-shadow">Enter an Epic Username</h2>
       <form>
         <input
           type="text"
@@ -33,6 +35,7 @@ const Login = () => {
           value={userInput}
           onChange={enterUsername}></input>
           <button
+            className="blue-gradient box-shadow text-drop-shadow"
             onClick={logUserIn}
             >
             LEMME SEE THOSE STATS
