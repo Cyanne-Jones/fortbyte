@@ -7,11 +7,11 @@ const NewsItem = ({item}) => {
 
   const toggleFavoritedNewsItem = useDataStore((state) => state.toggleFavoritedNewsItem)
   return (
-    <div className="news-item yellow-gradient">
+    <div className="news-item yellow-gradient box-shadow">
       <div className="news-header">
         <h2 className="news-title blue-gradient text-drop-shadow">{item.title}</h2>
         <p 
-          className={item.isFavorited ? "star star-favorite" : "star"}
+          className={item.isFavorited ? "star star-favorite text-drop-shadow" : "star text-drop-shadow"}
           onClick={() => toggleFavoritedNewsItem(item.id)}
         >
             ★

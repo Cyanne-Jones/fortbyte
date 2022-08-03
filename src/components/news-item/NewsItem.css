@@ -40,9 +40,11 @@ img {
 
 .star:hover {
   cursor: pointer;
+  color: white;
 }
 
 .news-text {
+  color: black;
   font-size: 1.2rem;
   margin: 0px;
   margin-right: 1rem;

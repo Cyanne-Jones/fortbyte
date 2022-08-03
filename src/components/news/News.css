@@ -11,3 +11,10 @@ button {
   font-size: 1.7rem;
   color: black;
 }
+
+button:hover {
+  cursor: pointer;
+  background: linear-gradient(#024BDE, #4528A4);
+  color: #FFF6B8;
+  border-radius: 1rem;
+}

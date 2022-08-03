@@ -1,6 +1,6 @@
 import '../shared-styles.css'
 import './App.css';
-import { Route, NavLink, Routes } from "react-router-dom"
+import { Route, NavLink, Routes, Link } from "react-router-dom"
 import News from "../news/News"
 import Stats from "../stats/Stats"
 import ItemShop from "../item-shop/ItemShop"
@@ -25,20 +25,22 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1 className="text-drop-shadow">FORTBYTE</h1>
+        <Link to="/" className="site-name">
+          <h1 className="text-drop-shadow">FORTBYTE</h1>
+        </Link>
         <nav>
           <NavLink to="/" className={({isActive}) => 
-            (isActive ? "yellow-gradient blue-font text-drop-shadow" : "text-drop-shadow")}
+            (isActive ? "yellow-gradient blue-font text-drop-shadow box-shadow" : "text-drop-shadow")}
           >
             News
           </NavLink>
           <NavLink to="stats" className={({isActive}) => 
-            (isActive ? "yellow-gradient blue-font text-drop-shadow" : "text-drop-shadow")}
+            (isActive ? "yellow-gradient blue-font text-drop-shadow box-shadow" : "text-drop-shadow")}
           >
             Stats
           </NavLink>
           <NavLink to="shop" className={({isActive}) => 
-            (isActive ? "yellow-gradient blue-font text-drop-shadow" : "text-drop-shadow")}
+            (isActive ? "yellow-gradient blue-font text-drop-shadow box-shadow" : "text-drop-shadow")}
           >
             Item shop
           </NavLink>
