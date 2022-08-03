@@ -33,7 +33,7 @@ const News = () => {
     <div className="news">
       <button
         onClick={toggleFavoriteMode}
-        className="yellow-gradient text-drop-shadow box-shadow"
+        className="filter-button yellow-gradient text-drop-shadow box-shadow"
         >
           FILTER BY STARRED NEWS
       </button>
