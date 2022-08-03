@@ -6,20 +6,14 @@ import Stats from "../stats/Stats";
 import ItemShop from "../item-shop/ItemShop";
 import useDataStore from "../hooks/useDataStore";
 import { useEffect, useState } from 'react';
+import fetchData from "../apiCalls"
 
 function App() {
   const setNewsItems = useDataStore((state) => state.setNewsItems);
   const [error, setError] = useState('')
 
   useEffect(() => {
-    fetch('https://fortnite-api.com/v2/news')
-    .then(res => {
-      if (res.status === 200) {
-        return res.json()
-      } else {
-        throw new Error("Oh no!")
-      }
-    })
+    fetchData('https://fortnite-api.com/v2/news')
     .then(res => {
       const newItems = res.data.br.motds.map(item => ({...item, isFavorited: false}))
       setNewsItems(newItems)
