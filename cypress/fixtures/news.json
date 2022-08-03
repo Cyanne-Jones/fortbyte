@@ -1,0 +1,84 @@
+{
+  "status": 200,
+  "data": {
+      "br": {
+          "hash": "57636951a854079f71e6aab37b9d947b81e25ab6",
+          "date": "2022-07-30T00:00:08Z",
+          "image": "https://cdn.fortnite-api.com/news/v2/57636951a854079f71e6aab37b9d947b81e25ab6.gif",
+          "motds": [
+              {
+                  "id": "127b7927-665c-4a82-bf60-2335ddbfff0c",
+                  "title": "Indiana Jones Is Here",
+                  "tabTitle": "Indiana Jones Is Here",
+                  "body": "Time to get some fortune and glory. Complete Quests to unlock Indiana Jones, alternative styles and more!",
+                  "image": "https://cdn-live.prm.ol.epicgames.com/prod/528719b3ef1d8003cc8a913ee122411bcae6084dd08d29fa64d1b619012e0487b9552d86d935004bd77681e824653ac5-3d216921-23a1-477d-a340-255fb0696949.jpeg?width=1920",
+                  "tileImage": "https://cdn-live.prm.ol.epicgames.com/prod/528719b3ef1d8003cc8a913ee122411b3102a6af62372e85c59727d5cca5e73f-6d10d426-0914-4c12-97a6-ee543688a0c3.jpeg?width=1024",
+                  "sortingPriority": 100,
+                  "hidden": false
+              },
+              {
+                  "id": "3c0960ab-3185-4868-a5e5-f4b5f76836b6",
+                  "title": "No Sweat Summer",
+                  "tabTitle": "No Sweat Summer",
+                  "body": "Challenge your friends to boat races, complete Quests for free rewards, vote to help rebuild Tilted Towers, or just Emote all summer long!",
+                  "image": "https://cdn-live.prm.ol.epicgames.com/prod/aeca74ebb19e70e44afd5d1668624081c1e7e471cf571ac605819f3d38099bb340f8c0faaf4b0870dea8d47109e62524-d1ea0184-4729-474c-9a11-9ffbca35c22c.jpeg?width=1920",
+                  "tileImage": "https://cdn-live.prm.ol.epicgames.com/prod/aeca74ebb19e70e44afd5d16686240819d37fe179cebb34fd7b8d6afb7c0cdf5c2f40d78f109ac7544632c734bdb1949-efb44355-8809-472f-8841-16587cef1a60.jpeg?width=1024",
+                  "sortingPriority": 90,
+                  "hidden": false,
+                  "websiteUrl": "fn.gg/NoSweatSummer",
+                  "videoString": "NoSweatSummer_2022",
+                  "videoId": "tSvAjbBwPmURCDthFy"
+              },
+              {
+                  "id": "d6f24fe2-f60e-4de4-93ab-2cd3783f5e42",
+                  "title": "GeForce Now",
+                  "tabTitle": "GeForce NOW",
+                  "body": "Play Fortnite on mobile or desktop with a browser or the GFN App using GeForce NOW before August 4 to get The Dish-stroyer Pickaxe for free! Get started today at fn.gg/GeForceNow",
+                  "image": "https://cdn-live.prm.ol.epicgames.com/prod/e9aea314a75fe0e23ca2eaf73cbfd4eb67b2564808c4ed2ad8c6ac232234b57cd3dff7c822b7c66b5f233a6d4f079ebe-b753ffe7-42dd-45ea-a05b-20808ed7d83e.jpeg?width=1920",
+                  "tileImage": "https://cdn-live.prm.ol.epicgames.com/prod/e9aea314a75fe0e23ca2eaf73cbfd4ebdb1d67d87134ff8fa255cbeb2ce6fe46a99ba1c098d2d963d0e2174fd963c86d-dbd3d022-449d-4b11-af62-7e3291f8fe81.jpeg?width=1024",
+                  "sortingPriority": 80,
+                  "hidden": false,
+                  "websiteUrl": "fn.gg/GeForceNow"
+              },
+              {
+                  "id": "2271f937-038e-40a2-8ba6-f14f569b2da7",
+                  "title": "Arena Zero Build Update",
+                  "tabTitle": "Arena Zero Build Update",
+                  "body": "Overshield Siphon has been added to Arena Zero Build! Eliminating a player will now immediately fill your Overshield.",
+                  "image": "https://cdn-live.prm.ol.epicgames.com/prod/789cc8ffaaaddd416a8ea87a88d697cdde2cdec87bad1d95f4a625d973623fa1fce7f78604d5e253d1443d8cbabfac76-990ba737-be3b-4abc-91dc-26775fd3e56e.jpeg?width=1920",
+                  "tileImage": "https://cdn-live.prm.ol.epicgames.com/prod/789cc8ffaaaddd416a8ea87a88d697cda4042efca899fab78a8304e1c24538d3d94fc80211749f383afcf06dc49b3895-174658f8-8ad7-41d4-89c3-41eb840ace26.jpeg?width=1024",
+                  "sortingPriority": 70,
+                  "hidden": false
+              }
+          ],
+          "messages": null
+      },
+      "stw": {
+          "hash": "9be0387ed5fdef5ef1a4a2d5c9f39c0bcc0df406",
+          "date": "2022-07-28T04:01:14Z",
+          "image": null,
+          "motds": null,
+          "messages": [
+              {
+                  "title": "Beyond the Stellar Horizon!",
+                  "body": "Join the cast and crew of Beyond the Stellar Horizon as the VSS Gallant takes flight once more! Brave this questline to unlock Azalea Clark, the Mythic Outlander.",
+                  "image": "https://cdn2.unrealengine.com/09br-retroscifiquest-motd-1024x512-65362858de64.jpg",
+                  "adspace": "SEASONAL QUESTLINE"
+              },
+              {
+                  "title": "Crackshot Hits the Road, Part 2!",
+                  "body": "Crackshot makes his way back to the Radio Station to broadcast part 2 of his Song of the Summer. It’s time to Hit the Road with a second modifier to unlock the Deciblaster",
+                  "image": "https://cdn2.unrealengine.com/10stw-mayday-crackshot-motd-1024x512-682778366.jpg",
+                  "adspace": "SEASONAL EVENT"
+              },
+              {
+                  "title": "Fortnite Birthday Celebration!",
+                  "body": "Earn a Birthday Llama each day by logging on and completing a Birthday Quest! There are 7 quests, each of which only lasts one day! Eliminate 50 Cake Sploders throughout the week to earn an additional Llama!",
+                  "image": "https://cdn2.unrealengine.com/09stw-birthdayllama-motd-1024x512-2e53e4e42fad.jpg",
+                  "adspace": "BIRTHDAY QUESTLINE"
+              }
+          ]
+      },
+      "creative": null
+  }
+}
