@@ -1,0 +1,13 @@
+.news-display {
+  display: flex;
+  flex-wrap: wrap;
+	justify-content: center;
+}
+
+button {
+  border: none;
+  font-family: 'Burbank Big Cd Bk';
+  padding: 0.5rem;
+  font-size: 1.7rem;
+  color: black;
+}

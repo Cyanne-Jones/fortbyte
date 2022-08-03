@@ -9,7 +9,7 @@ const NewsItem = ({item}) => {
   return (
     <div className="news-item yellow-gradient">
       <div className="news-header">
-        <h2 className="news-title blue-gradient">{item.title}</h2>
+        <h2 className="news-title blue-gradient text-drop-shadow">{item.title}</h2>
         <p 
           className={item.isFavorited ? "star star-favorite" : "star"}
           onClick={() => toggleFavoritedNewsItem(item.id)}
