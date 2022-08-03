@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import useDataStore from "../hooks/useDataStore";
 import '../shared-styles.css';
 import "./Login.css"
@@ -9,10 +9,13 @@ const Login = () => {
   const [userInput, setUserInput] = useState("");
   const [error, setError] = useState("")
 
+  useEffect(() => {
+    setUserName('')
+  }, [])
+
   const logUserIn = (event) => {
     event.preventDefault();
     setError('')
-    setUserName(userInput)
     fetch(`https://fortnite-api.com/v2/stats/br/v2?name=${userInput}`, {
       headers: {
         Authorization: process.env.REACT_APP_API_KEY
@@ -26,7 +29,9 @@ const Login = () => {
         throw new Error("Invalid username, try again")
       }
     })
-    .then(res => setUserStats(res.data.stats.all))
+    .then(res => {
+      setUserName(userInput)
+      setUserStats(res.data.stats.all)})
     .catch(errorMsg => setError(errorMsg))
   }
 
