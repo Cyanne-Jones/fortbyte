@@ -1,18 +1,20 @@
 import React, { useState } from "react";
 import useDataStore from "../hooks/useDataStore";
-import '../shared-styles.css';
+import "../shared-styles.css";
 import "./StatsDisplay.css"
 
 const StatsDisplay = () => {
-  const userName = useDataStore((state) => state.userName)
-  const setUserName = useDataStore((state) => state.setUserName)
+  const userName = useDataStore((state) => state.userName);
+  const setUserName = useDataStore((state) => state.setUserName);
   const userStats = useDataStore((state) => state.userStats);
-  const [mode, setMode] = useState("overall")
+  const [mode, setMode] = useState("overall");
 
   return (
     <div className="stats-display-component">
       <div className="stats-display yellow-gradient box-shadow">
-        <h2 className="username blue-gradient box-shadow text-drop-shadow">{userName}</h2>
+        <h2 className="username blue-gradient box-shadow text-drop-shadow">
+          {userName}
+        </h2>
         <div className="button-container">
           <button 
             className={mode === "overall" ? "blue-gradient box-shadow mode-button" : "inactive-button mode-button"}
@@ -120,9 +122,14 @@ const StatsDisplay = () => {
             </div>
         </div>
       </div>
-      <button className="try-again-button blue-gradient box-shadow" onClick={() => setUserName("")}>Try with another username!</button>
+      <button 
+        className="try-again-button blue-gradient box-shadow" 
+        onClick={() => setUserName("")}
+      >
+        Try with another username!
+      </button>
     </div>
-  )
+  );
 };
 
 export default StatsDisplay;
