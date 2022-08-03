@@ -1,0 +1,20 @@
+.news-display {
+  display: flex;
+  flex-wrap: wrap;
+	justify-content: center;
+}
+
+button {
+  border: none;
+  font-family: 'Burbank Big Cd Bk';
+  padding: 0.5rem;
+  font-size: 1.7rem;
+  color: black;
+}
+
+button:hover {
+  cursor: pointer;
+  background: linear-gradient(#024BDE, #4528A4);
+  color: #FFF6B8;
+  border-radius: 1rem;
+}

@@ -1,4 +1,5 @@
 body {
+  background: radial-gradient(circle at center, #06B4F9 0, #009CF3, #024BDE);
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -8,4 +9,6 @@ body {
   font-weight: 900;
   font-style: normal;
   font-display: swap;
+  height: 100vh;
+  color: white;
 }
