@@ -20,13 +20,13 @@ const Login = () => {
     })
     .then(res => {
       if(res.status === 200) {
-        return res => res.json()
+        return res.json()
       }
       else if (res.status === 400) {
         throw new Error("Invalid username, try again")
       }
     })
-    .then(res => setUserStats(res))
+    .then(res => setUserStats(res.data.stats.all))
     .catch(errorMsg => setError(errorMsg))
   }
 
