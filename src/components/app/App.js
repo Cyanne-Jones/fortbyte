@@ -1,17 +1,14 @@
-import '../shared-styles.css'
+import '../shared-styles.css';
 import './App.css';
-import { Route, NavLink, Routes, Link } from "react-router-dom"
-import News from "../news/News"
-import Stats from "../stats/Stats"
-import ItemShop from "../item-shop/ItemShop"
-import useDataStore from "../hooks/useDataStore"
+import { Route, NavLink, Routes, Link } from "react-router-dom";
+import News from "../news/News";
+import Stats from "../stats/Stats";
+import ItemShop from "../item-shop/ItemShop";
+import useDataStore from "../hooks/useDataStore";
 import { useEffect } from 'react';
 
 function App() {
-
-  const newsItems = useDataStore((state) => state.newsItems)
-  const storeItems = useDataStore((state) => state.storeItems)
-  const setNewsItems = useDataStore((state) => state.setNewsItems)
+  const setNewsItems = useDataStore((state) => state.setNewsItems);
 
   useEffect(() => {
     fetch('https://fortnite-api.com/v2/news')
@@ -19,14 +16,17 @@ function App() {
     .then(res => {
       const newItems = res.data.br.motds.map(item => ({...item, isFavorited: false}))
       setNewsItems(newItems)
-    })
+      .catch(error => console.log(error))
+    });
   }, []);
 
   return (
     <div className="App">
       <header>
-        <Link to="/" className="site-name">
-          <h1 className="text-drop-shadow">FORTBYTE</h1>
+        <Link to="/" 
+          className="site-name"
+        >
+            <h1 className="text-drop-shadow">FORTBYTE</h1>
         </Link>
         <nav>
           <NavLink to="/" className={({isActive}) => 
@@ -53,6 +53,6 @@ function App() {
       </Routes>
     </div>
   );
-}
+};
 
 export default App;

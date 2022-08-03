@@ -1,7 +1,7 @@
 import React from "react";
-import "./NewsItem.css"
-import '../shared-styles.css'
-import useDataStore from "../hooks/useDataStore"
+import "./NewsItem.css";
+import '../shared-styles.css';
+import useDataStore from "../hooks/useDataStore";
 
 const NewsItem = ({item}) => {
 
@@ -23,6 +23,6 @@ const NewsItem = ({item}) => {
       </div>
     </div>
   )
-}
+};
 
 export default NewsItem;

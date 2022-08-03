@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import useDataStore from "../hooks/useDataStore"
-import NewsItem from "../news-item/NewsItem"
-import "./News.css"
-import "../shared-styles.css"
+import useDataStore from "../hooks/useDataStore";
+import NewsItem from "../news-item/NewsItem";
+import "./News.css";
+import "../shared-styles.css";
 
 const News = () => {
 
@@ -10,7 +10,7 @@ const News = () => {
   const [favoriteMode, setFavoriteMode] = useState(false);
 
   const toggleFavoriteMode = () => {
-    setFavoriteMode(!favoriteMode)
+    setFavoriteMode(!favoriteMode);
   }
 
   const mappedNewsItems = newsItems
@@ -24,9 +24,10 @@ const News = () => {
       .filter(item => item.isFavorited)
       .map(item => {
         return <NewsItem 
-        key={item.id}
-        item={item}
-      />})
+          key={item.id}
+          item={item}
+        />}
+      );
 
   return(
     <div className="news">
