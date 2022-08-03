@@ -42,7 +42,7 @@ function App() {
           <NavLink to="shop" className={({isActive}) => 
             (isActive ? "yellow-gradient blue-font text-drop-shadow box-shadow" : "text-drop-shadow")}
           >
-            Item shop
+            Item Shop
           </NavLink>
         </nav>
       </header>
