@@ -10,3 +10,9 @@
 .text-drop-shadow {
   text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
 }
+
+.blue-gradient {
+  background: linear-gradient(#024BDE, #4528A4);
+  color: #FFF6B8;
+  border-radius: 1rem;
+}

@@ -5,12 +5,14 @@ import '../shared-styles.css'
 const NewsItem = ({item}) => {
   return (
     <div className="news-item yellow-gradient">
-      <div className="item-header">
-        <h2>{item.title}</h2>
+      <div className="news-header">
+        <h2 className="news-title blue-gradient">{item.title}</h2>
         <p className="favorite-star">★</p>
       </div>
-      <p>{item.body}</p>
-      <img src={item.image} alt="news image"/>
+      <div className="news-body">
+        <p className="news-text">{item.body}</p>
+        <img src={item.image} alt="news image"/>
+      </div>
     </div>
   )
 }
