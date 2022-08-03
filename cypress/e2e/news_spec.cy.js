@@ -3,7 +3,7 @@ describe('News/Home', () => {
   beforeEach(() => {
     cy.visit("localhost:3000/");
     cy.intercept("GET", "https://fortnite-api.com/v2/news", {
-      statusCode: 201,
+      statusCode: 200,
       fixture: "news.json"
     })
   })
@@ -44,5 +44,13 @@ describe('News/Home', () => {
     cy.get(".filter-button").click();
     cy.get(".star").click();
     cy.get(".news").should('not.have.class', ".news-item");
-  })
-})
+  });
+
+  it("should give error if server fails", () => {
+    cy.intercept('GET', "https://fortnite-api.com/v2/news", {
+      statusCode: 404,
+      body: "cypress error"
+    });
+    cy.contains("Oh no, something went wrong!");
+  });
+});

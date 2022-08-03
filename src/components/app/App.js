@@ -5,19 +5,26 @@ import News from "../news/News";
 import Stats from "../stats/Stats";
 import ItemShop from "../item-shop/ItemShop";
 import useDataStore from "../hooks/useDataStore";
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
   const setNewsItems = useDataStore((state) => state.setNewsItems);
+  const [error, setError] = useState('')
 
   useEffect(() => {
     fetch('https://fortnite-api.com/v2/news')
-    .then(res => res.json())
+    .then(res => {
+      if (res.status === 200) {
+        return res.json()
+      } else {
+        throw new Error("Oh no!")
+      }
+    })
     .then(res => {
       const newItems = res.data.br.motds.map(item => ({...item, isFavorited: false}))
       setNewsItems(newItems)
     })
-    .catch(error => console.log(error));
+    .catch(error => setError(error));
   }, []);
 
   return (
@@ -51,6 +58,9 @@ function App() {
         <Route exact path="stats" element={<Stats />} />
         <Route exact path="shop" element={<ItemShop />} />
       </Routes>
+      <p className="app-error">
+        {error ? "Oh no, something went wrong!" : ""}
+      </p>
     </div>
   );
 };
