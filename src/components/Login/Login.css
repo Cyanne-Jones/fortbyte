@@ -10,12 +10,13 @@
 form {
   display: flex;
   flex-direction: column;
-  width: 30rem;
+  width: 80%;
   height: 50%;
+  margin: 1rem;
 }
 
 .epic-name {
-  width: 30rem;
+  width: 80%;
   margin-bottom: 3rem;
   font-size: 3rem;
   padding: 1rem;
