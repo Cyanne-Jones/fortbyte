@@ -17,12 +17,12 @@ const fetchUserStats = (userName) => {
   })
   .then(res => {
     if(res.status === 200) {
-      return res.json()
+      return res.json();
     }
     else if (res.status === 400) {
-      throw new Error("Invalid username, try again")
+      throw new Error("Invalid username, try again");
     }
   });
-}
+};
 
 export { fetchData, fetchUserStats };

@@ -27,7 +27,7 @@ function App() {
         <Link to="/" 
           className="site-name"
         >
-            <h1 className="text-drop-shadow">FORTBYTE</h1>
+          <h1 className="text-drop-shadow">FORTBYTE</h1>
         </Link>
         <nav>
           <NavLink to="/" className={({isActive}) => 

@@ -1,37 +1,37 @@
 import React, { useState, useEffect } from "react";
 import useDataStore from "../hooks/useDataStore";
-import '../shared-styles.css';
-import "./Login.css"
-import { fetchUserStats } from "../apiCalls"
+import "../shared-styles.css";
+import "./Login.css";
+import { fetchUserStats } from "../apiCalls";
 
 const Login = () => {
-  const setUserStats = useDataStore((state) => state.setUserStats)
-  const setUserName = useDataStore((state) => state.setUserName)
+  const setUserStats = useDataStore((state) => state.setUserStats);
+  const setUserName = useDataStore((state) => state.setUserName);
   const [userInput, setUserInput] = useState("");
-  const [error, setError] = useState("")
+  const [error, setError] = useState("");
 
   useEffect(() => {
-    setUserName('')
-  }, [])
+    setUserName('');
+  }, []);
 
   const logUserIn = (event) => {
     event.preventDefault();
-    setError('')
+    setError('');
     fetchUserStats(userInput)
     .then(res => {
       setUserName(userInput)
       setUserStats(res.data.stats.all)})
-    .catch(errorMsg => setError(errorMsg))
+    .catch(errorMsg => setError(errorMsg));
   }
 
   const enterUsername = (event) => {
-    setUserInput(event.target.value)
+    setUserInput(event.target.value);
   }
 
   return (
     <div className="login yellow-gradient box-shadow">
       <h2 className="epic-name blue-gradient box-shadow">Enter an Epic Username</h2>
-      {error ? <p className="error">"Looks like you've entered an invalid username!"</p> : ''}
+      {error && <p className="error">"Looks like you've entered an invalid username!"</p> }
       <form>
         <input
           type="text"
