@@ -54,17 +54,17 @@ function App() {
         </Link>
         <nav>
           <NavLink to="/" className={({isActive}) => 
-            (isActive ? "yellow-gradient blue-font text-drop-shadow box-shadow" : "text-drop-shadow")}
+            (isActive ? "yellow-gradient blue-font text-drop-shadow box-shadow news-button" : "text-drop-shadow news-button")}
           >
             News
           </NavLink>
           <NavLink to="stats" className={({isActive}) => 
-            (isActive ? "yellow-gradient blue-font text-drop-shadow box-shadow" : "text-drop-shadow")}
+            (isActive ? "yellow-gradient blue-font text-drop-shadow box-shadow stats-button" : "text-drop-shadow stats-button")}
           >
             Stats
           </NavLink>
           <NavLink to="shop" className={({isActive}) => 
-            (isActive ? "yellow-gradient blue-font text-drop-shadow box-shadow" : "text-drop-shadow")}
+            (isActive ? "yellow-gradient blue-font text-drop-shadow box-shadow shop-button" : "text-drop-shadow shop-button")}
           >
             Item Shop
           </NavLink>

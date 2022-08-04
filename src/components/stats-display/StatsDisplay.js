@@ -17,25 +17,25 @@ const StatsDisplay = () => {
         </h2>
         <div className="button-container">
           <button 
-            className={mode === "overall" ? "blue-gradient box-shadow mode-button" : "inactive-button mode-button"}
+            className={mode === "overall" ? "blue-gradient box-shadow mode-button overall" : "inactive-button mode-button overall"}
             onClick={() => setMode("overall")}
           >
             overall
           </button>
           <button 
-            className={mode === "solo" ? "blue-gradient box-shadow mode-button" : "inactive-button mode-button"}
+            className={mode === "solo" ? "blue-gradient box-shadow mode-button solo" : "inactive-button mode-button solo"}
             onClick={() => setMode("solo")}
           >
             solo
           </button>
           <button 
-            className={mode === "duo" ? "blue-gradient box-shadow mode-button" : "inactive-button mode-button"}
+            className={mode === "duo" ? "blue-gradient box-shadow mode-button duo" : "inactive-button mode-button duo"}
             onClick={() => setMode("duo")}
           >
             duos
           </button>
           <button 
-            className={mode === "squad" ? "blue-gradient box-shadow mode-button" : "inactive-button mode-button"}
+            className={mode === "squad" ? "blue-gradient box-shadow mode-button squad" : "inactive-button mode-button squad"}
             onClick={() => setMode("squad")}
           >
             squads
