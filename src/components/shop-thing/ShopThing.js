@@ -1,6 +1,7 @@
 import React from "react";
 import "./ShopThing.css"
 import "../shared-styles.css";
+import PropTypes from 'prop-types';
 
 const ShopThing = ({item}) => {
   return(
@@ -15,6 +16,10 @@ const ShopThing = ({item}) => {
       <p className="description">{item.description}</p>
     </div>
   );
+};
+
+ShopThing.propTypes = {
+  item: PropTypes.object
 };
 
 export default ShopThing;

@@ -2,6 +2,7 @@ import React from "react";
 import "./NewsItem.css";
 import "../shared-styles.css";
 import useDataStore from "../hooks/useDataStore";
+import PropTypes from 'prop-types';
 
 const NewsItem = ({item}) => {
 
@@ -30,6 +31,10 @@ const NewsItem = ({item}) => {
       </div>
     </div>
   )
+};
+
+NewsItem.propTypes = {
+  item: PropTypes.object
 };
 
 export default NewsItem;
