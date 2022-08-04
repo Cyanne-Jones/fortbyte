@@ -1,6 +1,6 @@
 import React from "react";
 import useDataStore from "../hooks/useDataStore";
-import Login from "../login/Login.js";
+import Login from "../login/Login";
 import StatsDisplay from "../stats-display/StatsDisplay"
 import "../shared-styles.css";
 import "./Stats.css"
