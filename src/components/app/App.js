@@ -10,15 +10,38 @@ import { fetchData } from "../apiCalls"
 
 function App() {
   const setNewsItems = useDataStore((state) => state.setNewsItems);
+  const setShopItems = useDataStore((state) => state.setShopItems);
   const [error, setError] = useState('')
 
   useEffect(() => {
-    fetchData('https://fortnite-api.com/v2/news')
+    fetchData("https://fortnite-api.com/v2/news")
     .then(res => {
       const newItems = res.data.br.motds.map(item => ({...item, isFavorited: false}))
       setNewsItems(newItems)
     })
     .catch(error => setError(error));
+
+    fetchData("https://fortnite-api.com/v2/shop/br")
+      .then(res => {
+        const shopItems = [];
+        
+        res.data.daily.entries.forEach(entry => {
+          entry.items.forEach(item => {
+            const newShopItem = {
+              name:item.name,
+              id: item.id,
+              description: item.description,
+              type: item.type.displayValue,
+              price: entry.finalPrice,
+              rarity: item.rarity.displayValue,
+              image: item.images.featured || item.images.icon
+            };
+            shopItems.push(newShopItem)
+          })
+        });
+        setShopItems(shopItems);
+      })
+      .catch(error => setError(error))
   }, []);
 
   return (
