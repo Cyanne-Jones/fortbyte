@@ -39,7 +39,6 @@ function App() {
             shopItems.push(newShopItem)
           })
         });
-        console.log(shopItems)
         setShopItems(shopItems);
       })
       .catch(error => setError(error))

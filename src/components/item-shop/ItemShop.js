@@ -4,9 +4,13 @@ import useDataStore from "../hooks/useDataStore"
 
 const ItemShop = () => {
 
-  const shopItems = useDataStore((state) => state.shopItems)
+  const shopItems = useDataStore((state) => state.shopItems);
+  const mappedShopItems = shopItems.map(item => <ShopThing key={item.id} item={item} />);
+
   return (
-    <h1>SHOP</h1>
+    <div className="shop">
+      {mappedShopItems}
+    </div>
   )
 };
 
