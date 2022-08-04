@@ -2,7 +2,7 @@ import create from "zustand";
 
 const useDataStore = create((set) => ({
   newsItems: [],
-  storeItems: [],
+  shopItems: [],
   userName: "",
   userStats: [],
   setNewsItems: (data) => set(() => { 
@@ -13,6 +13,9 @@ const useDataStore = create((set) => ({
   }),
   setUserName: (data) => set(() => {
     return ({userName: data});
+  }),
+  setShopItems: (data) => set(() => {
+    return ({shopItems: data})
   }),
   toggleFavoritedNewsItem: (id) => set((state) => {
     const freshState = state.newsItems.map(item => {
