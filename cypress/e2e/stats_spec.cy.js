@@ -48,4 +48,14 @@ describe('Stats page', () => {
     cy.contains("Enter an Epic Username");
     cy.get("form").contains("LEMME SEE THOSE STATS");
   });
+
+  it("Should let a user navigate between the different game modes", () => {
+    cy.get("input").type("hails8n666");
+    cy.get(".login-button").click();
+    cy.get(".duo").click();
+    cy.contains("Score: 57746");
+    cy.contains("Score Per Minute: 25.428");
+    cy.contains("Score Per Match: 310.462");
+  });
+
 });
