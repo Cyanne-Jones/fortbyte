@@ -34,7 +34,7 @@ function App() {
               type: item.type.displayValue,
               price: entry.finalPrice,
               rarity: item.rarity.displayValue,
-              image: item.images.featured
+              image: item.images.featured || item.images.icon
             };
             shopItems.push(newShopItem)
           })
