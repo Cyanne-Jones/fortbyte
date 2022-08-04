@@ -9,7 +9,10 @@ const ItemShop = () => {
 
   return (
     <div className="shop">
-      {mappedShopItems}
+      <h2 className="shop-update">Daily items updated every day at 0:00UTC</h2>
+      <div className="item-container">
+        {mappedShopItems}
+      </div>
     </div>
   )
 };
