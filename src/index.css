@@ -12,3 +12,12 @@ body {
   height: 100vh;
   color: white;
 }
+
+@font-face {
+  font-family: 'Burbank Big Cd Bk';
+  src: url('https://fort-byte.herokuapp.com/public/assets/BurbankBigCondensed-Black.woff2') format('woff2'),
+      url('https://fort-byte.herokuapp.com/public/assets/BurbankBigCondensed-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
