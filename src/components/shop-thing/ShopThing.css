@@ -1,0 +1,72 @@
+.shop-thing {
+  height: 15rem;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-name {
+  font-size: 1.5rem;
+  width: 60%;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+.type-and-rarity {
+  margin: 0px;
+  color: #022874;
+}
+
+.image-and-price {
+  display: flex;
+  align-items: center;
+}
+
+.item-image,
+.item-price,
+.v-buck {
+  margin: 1rem;
+}
+
+.item-image {
+  height: 7rem;
+  border-radius: 1rem;
+  margin-top: 0.5rem;
+}
+
+.description {
+  margin-top: 0px;
+  color: #022874;
+}
+
+.item-price {
+  font-size: 2.5rem;
+  margin-left: 0px;
+  color: black;
+}
+
+.default {
+  background: linear-gradient(#626262, #cecece);
+}
+
+.uncommon {
+  background: linear-gradient(#36A310, #96EAA8);
+}
+
+.rare {
+ background: linear-gradient(#100bf6, #b9d9e0);
+}
+
+.epic {
+  background: linear-gradient(#b10dff, #ca86ff);
+ }
+
+.legendary {
+  background: linear-gradient(#ff7b02, #ffe503);
+}
+
+.v-buck {
+  height: 2rem;
+  margin-left: 0px;
+}

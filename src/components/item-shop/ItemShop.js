@@ -1,6 +1,8 @@
 import React from "react";
-import ShopThing from "../shop-thing/ShopThing"
-import useDataStore from "../hooks/useDataStore"
+import ShopThing from "../shop-thing/ShopThing";
+import useDataStore from "../hooks/useDataStore";
+import "./ItemShop.css"
+import "../shared-styles.css"
 
 const ItemShop = () => {
 
