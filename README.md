@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# Fortbyte
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### A tool to keep track of Fortnite news, user stats and daily item shop updates from the comfort of your mobile or desktop (no console needed!)
 
-## Available Scripts
+Quick and easy to access, visit [Fortbyte](fortbyte.vercel.app) where it's deployed on Vercel to check it out! 
 
-In the project directory, you can run:
+#### Installation instructions
 
-### `npm start`
+- Clone down this repo and `cd` into it
+- Run `npm i` to install dependencies
+- Head over to [Fortnite-API](https://dash.fortnite-api.com/account) and follow the directions to get yourself an API key (Heads up though: Discord account required)
+- Copy and paste your API key into `.env.example` where `REACT-APP_API_KEY` is
+- Run `npm start` to boot up the server and head over to `localhost:3000`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Run `npx cypress open` to run testing suite
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### Usage instructions
 
-### `npm test`
+From the home page, you'll see this week's news. You're able to favorite a news item and filter it by favorited to only show the news items you're interested in. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##### Stats
+Head on over to the stats page! Enter any Epic Games to see the account's stats. See how you and your squad compares! Who has the highest kd? Now you know! This is genuinely my favorite part of this app as a lot of this information isn't shown in game. *Note: due to the nature of the data pulled from Fortnite API, trios stats are unavailable at this time, and don't affect your overall score*
 
-### `npm run build`
+If you don't have an Epic account, you're more than welcome to use my username, `hails8n666` to check out how this page works!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##### Shop 
+From the shop tab, you'll be able to see all the daily items refreshed at 0:00GMT every day. No more having to wait for a long console/PC login experience just to see if there's anything good in the shop today! Currently only daily items are displayed, but I hope to add the featured items in the future. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### See it in action! 
+![short-fortbyte-screencap_AdobeExpress](https://user-images.githubusercontent.com/98280256/183130402-bd435431-07bf-4c79-817e-933cd6c96923.gif)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Built using
+- React
+- HTML
+- CSS
+- Cypress testing
+- [Zustand state management](https://github.com/pmndrs/zustand) (I love this tool so much)
+- Fetch API
+- React Router
+- [Figma](https://www.figma.com/file/zI4EPf1Ig9vMvZeoLkD9mI/Fortbyte?node-id=0%3A1)
+- Trello 
+- Vercel deployment
 
-### `npm run eject`
+#### Reflections
+This project was probably the most fun project I've made to date. Creating a tool that my friends are excited to use every day is probably the coolest feeling you can have as a developer, or even just a maker in general. The information returned from Fortnite API felt so gnarly to dig through, that this project gave me so much more comfortability rifling through complex data sets to just get to what I need. I think the shop data returns some 30k lines of code. That paired with the first time implementing global state usage in a React project has helped me feel so much more compotent and confident as a delveoper. I would love to add so much more to this project. Things like featured items being displayed in the shop, as well as a filter by type, rarity and price would be really cool too as more things are being added to the shop. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This is my last solo project of [Turing School of Software And Design](https://turing.edu/)'s front end program, and it's crazy to think that 6 months ago I typed my first "hello world" into an HTML document an today I'm wrapping up this tool I'm really proud of. Overall this project was a blast to build and reminds me why I chose this dev path in the first place. There's room for silly and creative people in this programming world and I'm stoked to build more in the future. 
