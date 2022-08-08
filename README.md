@@ -2,7 +2,7 @@
 
 ### A tool to keep track of Fortnite news, user stats and daily item shop updates from the comfort of your mobile or desktop (no console needed!)
 
-Quick and easy to access, visit [Fortbyte](fortbyte.vercel.app) where it's deployed on Vercel to check it out! 
+Quick and easy to access, visit [Fortbyte](https://fortbyte.vercel.app) where it's deployed on Vercel to check it out! 
 
 #### Installation instructions
 
