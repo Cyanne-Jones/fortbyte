@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ShopThing from "../shop-thing/ShopThing";
 import useDataStore from "../hooks/useDataStore";
 import "./ItemShop.css"
@@ -44,6 +44,10 @@ const ItemShop = () => {
   const shopItems = useDataStore((state) => state.shopItems);
   const [sortMode, setSortMode] = React.useState('showAll');
   const [areFiltersExpandedMobile, setAreFiltersExpandedMobile] = React.useState(false);
+
+  useEffect(() => {
+    areFiltersExpandedMobile && setAreFiltersExpandedMobile(false);
+  }, [sortMode])
 
   const sortedShopItems = shopItems.reduce((acc, item) => {
 
