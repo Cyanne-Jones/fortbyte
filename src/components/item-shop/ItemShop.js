@@ -7,7 +7,7 @@ import "../shared-styles.css"
 const ItemShop = () => {
 
   const shopItems = useDataStore((state) => state.shopItems);
-  const mappedShopItems = shopItems.map(item => <ShopThing key={item.id} item={item} />);
+  const mappedShopItems = shopItems.map((item, index) => <ShopThing key={`${item.id}${index}`} item={item} />);
 
   return (
     <div className="shop">
