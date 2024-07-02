@@ -33,8 +33,10 @@ function App() {
               description: item.description,
               type: item.type.displayValue,
               price: entry.finalPrice,
+              introduction: item.introduction.text,
               rarity: item.rarity.displayValue,
-              image: item.images.featured || item.images.icon
+              image: item.images.featured || item.images.icon,
+              bundleName: entry.bundle?.name || 'solo',
             };
             shopItems.push(newShopItem)
           })
