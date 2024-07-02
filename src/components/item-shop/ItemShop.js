@@ -46,8 +46,8 @@ const ItemShop = () => {
   const [areFiltersExpandedMobile, setAreFiltersExpandedMobile] = React.useState(false);
 
   useEffect(() => {
-    areFiltersExpandedMobile && setAreFiltersExpandedMobile(false);
-  }, [areFiltersExpandedMobile, sortMode])
+    setAreFiltersExpandedMobile(false);
+  }, [sortMode])
 
   const sortedShopItems = shopItems.reduce((acc, item) => {
 
@@ -93,7 +93,7 @@ const ItemShop = () => {
       <h2 className="shop-update">Items updated daily at 0:00UTC</h2>
       <div className="mobile-filter-button-container">
       <button 
-        className='mobile-filter-show filter-button' 
+        className='mobile-filter-show filter-button yellow-gradient box-shadow' 
         onClick={() => setAreFiltersExpandedMobile(!areFiltersExpandedMobile)}
       >
         {areFiltersExpandedMobile ? 'Hide' : 'Show'} filters
@@ -102,7 +102,7 @@ const ItemShop = () => {
       <div className={`filter-button-group ${!areFiltersExpandedMobile && 'hide'}`}>
       {filters.map(filter =>(
         <button 
-          className={`filter-button ${sortMode === filter.filterValue ? 'blue-gradient' : 'yellow-gradient'}`} 
+          className={`filter-button box-shadow ${sortMode === filter.filterValue ? 'blue-gradient' : 'yellow-gradient'}`} 
           key={filter.filterValue} 
           onClick={() => setSortMode(filter.filterValue)} 
         >
