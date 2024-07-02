@@ -4,7 +4,8 @@ const fetchData = (url) => {
     if (res.status === 200) {
       return res.json()
     } else {
-      throw new Error("Oh no!")
+      console.log('response', res)
+      throw new Error("Error fetching data")
     }
   });
 };
