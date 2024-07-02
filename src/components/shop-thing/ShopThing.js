@@ -14,6 +14,7 @@ const ShopThing = ({item}) => {
         <img className="v-buck" src="https://i.imgur.com/zATA1lA.png" alt="vbuck"/>
       </div>
       <p className="description">{item.description}</p>
+      <p className="description">{item.introduction}</p>
     </div>
   );
 };
