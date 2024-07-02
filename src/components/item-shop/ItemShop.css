@@ -33,6 +33,17 @@
   font-size: 2rem;
 }
 
+.filter-button-group {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.filter-button {
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+}
+
 @media screen and (max-width: 700px) {
   .shop-update {
     font-size: 1.5rem;
