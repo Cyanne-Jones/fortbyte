@@ -47,7 +47,7 @@ const ItemShop = () => {
 
   useEffect(() => {
     areFiltersExpandedMobile && setAreFiltersExpandedMobile(false);
-  }, [sortMode])
+  }, [areFiltersExpandedMobile, sortMode])
 
   const sortedShopItems = shopItems.reduce((acc, item) => {
 
