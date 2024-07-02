@@ -25,7 +25,7 @@ function App() {
       .then(res => {
         const shopItems = [];
         
-        res.data.daily.entries.forEach(entry => {
+        res.data.featured.entries.forEach(entry => {
           entry.items.forEach(item => {
             const newShopItem = {
               name:item.name,
@@ -33,15 +33,20 @@ function App() {
               description: item.description,
               type: item.type.displayValue,
               price: entry.finalPrice,
+              introduction: item.introduction.text,
               rarity: item.rarity.displayValue,
-              image: item.images.featured || item.images.icon
+              image: item.images.featured || item.images.icon,
+              bundleName: entry.bundle?.name || 'solo',
             };
             shopItems.push(newShopItem)
           })
         });
         setShopItems(shopItems);
       })
-      .catch(error => setError(error))
+      .catch(error => {
+        setError(error)
+        console.log(`%c You have an error: ${error}`, "color: #C71585; font-size: 20px; font-family: cursive;")
+      })
   }, []);
 
   return (
