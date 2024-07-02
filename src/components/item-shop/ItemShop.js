@@ -9,6 +9,40 @@ const ItemShop = () => {
   const shopItems = useDataStore((state) => state.shopItems);
   const [sortMode, setSortMode] = React.useState('showAll'); // bundles || outfit || pickaxes || emotes || wraps || gliders || contrails || backblings || music || loadingScreens ||
 
+  const filters = [
+    {
+      name: 'showAll',
+      items: shopItems,
+      displayName: 'Show All'
+    },
+    {
+      name: 'bundles',
+      items: shopItems.filter(item => item.bundleName !== 'solo'),
+      displayName: 'Bundles'
+      
+    },
+    {
+      name: 'outfit',
+      items: shopItems.filter(item => item.type === 'Outfit'),
+      displayName: 'Outfits'
+    },
+    {
+      name: 'pickaxes',
+      items: shopItems.filter(item => item.type === 'Pickaxe'),
+      displayName: 'Pickaxes'
+    },
+    {
+      name: 'emotes',
+      items: shopItems.filter(item => item.type === 'Emote'),
+      displayName: 'Emotes'
+    },
+    {
+      name: 'backBling',
+      items: shopItems.filter(item => item.type === 'Back Bling'),
+      displayName: 'Back Bling'
+    },
+  ]
+
   const sortedShopItems = shopItems.reduce((acc, item) => {
 
     if(item.bundleName !== 'solo') {
@@ -55,12 +89,10 @@ const ItemShop = () => {
   return (
     <div className="shop">
       <h2 className="shop-update">Items updated daily at 0:00UTC</h2>
-      <button onClick={() => setSortMode('outfit')} style={{backgroundColor: sortMode === 'outfit' ? 'cyan' : 'yellow'}}>outfits</button>
-      <button onClick={() => setSortMode('bundles')} style={{backgroundColor: sortMode === 'bundles' ? 'cyan' : 'yellow'}}>bundles</button>
-      <button onClick={() => setSortMode('pickaxes')} style={{backgroundColor: sortMode === 'pickaxes' ? 'cyan' : 'yellow'}}>pickaxes</button>
-      <button onClick={() => setSortMode('showAll')} style={{backgroundColor: sortMode === 'showAll' ? 'cyan' : 'yellow'}}>show all</button>
-      <button onClick={() => setSortMode('emotes')} style={{backgroundColor: sortMode === 'emotes' ? 'cyan' : 'yellow'}}>emotes</button>
-      <button onClick={() => setSortMode('backBling')} style={{backgroundColor: sortMode === 'backBling' ? 'cyan' : 'yellow'}}>back bling</button>
+      {filters.map(filter =>(
+        <button key={filter.name} onClick={() => setSortMode(filter.name)} style={{backgroundColor: sortMode === filter.name ? 'cyan' : 'yellow'}}>{filter.displayName}</button>
+      ))}
+
       <div className="item-container">
         {sortMode === 'bundles' && (
           <>
