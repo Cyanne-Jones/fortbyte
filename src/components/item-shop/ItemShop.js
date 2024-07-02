@@ -102,10 +102,9 @@ const ItemShop = () => {
       <div className={`filter-button-group ${!areFiltersExpandedMobile && 'hide'}`}>
       {filters.map(filter =>(
         <button 
-          className="filter-button" 
+          className={`filter-button ${sortMode === filter.filterValue ? 'filter-active' : 'filter-inactive'}`} 
           key={filter.filterValue} 
           onClick={() => setSortMode(filter.filterValue)} 
-          style={{backgroundColor: sortMode === filter.filterValue ? 'cyan' : 'yellow'}}
         >
           {filter.displayName}
         </button>
