@@ -40,17 +40,9 @@
   margin: 1rem;
 }
 
-.filter-active {
-  background-color: cyan
-}
-
-.filter-inactive {
-  background-color: yellow;
-}
-
 .filter-button {
   margin: 0.5rem;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
 }
 
 .mobile-filter-show {
