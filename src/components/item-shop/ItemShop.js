@@ -40,11 +40,11 @@ const ItemShop = () => {
         </div>
       </div>
     )
-  })
+  });
 
   return (
     <div className="shop">
-      <h2 className="shop-update">Daily items updated every day at 0:00UTC</h2>
+      <h2 className="shop-update">Items updated daily at 0:00UTC</h2>
       <div className="item-container">
         {bundledShopItems}
         {mappedShopItems}
