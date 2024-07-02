@@ -33,6 +33,7 @@
   font-size: 2rem;
 }
 
+/* style this button better lol */
 .filter-button-group {
   display: flex;
   justify-content: center;
@@ -44,8 +45,34 @@
   border-radius: 0.5rem;
 }
 
+.mobile-filter-show {
+  display: none;
+} 
+
+.hide {
+  display: none;
+}
+
+.mobile-filter-button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 @media screen and (max-width: 700px) {
   .shop-update {
     font-size: 1.5rem;
+  }
+  .filter-button-group {
+    flex-direction: column;
+  }
+  .mobile-filter-show {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 699px) {
+  .hide {
+    display: block;
   }
 }

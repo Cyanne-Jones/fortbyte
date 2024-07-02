@@ -43,6 +43,7 @@ const ItemShop = () => {
 
   const shopItems = useDataStore((state) => state.shopItems);
   const [sortMode, setSortMode] = React.useState('showAll');
+  const [areFiltersExpandedMobile, setAreFiltersExpandedMobile] = React.useState(false);
 
   const sortedShopItems = shopItems.reduce((acc, item) => {
 
@@ -86,7 +87,15 @@ const ItemShop = () => {
   return (
     <div className="shop">
       <h2 className="shop-update">Items updated daily at 0:00UTC</h2>
-      <div className='filter-button-group'>
+      <div className="mobile-filter-button-container">
+      <button 
+        className='mobile-filter-show filter-button' 
+        onClick={() => setAreFiltersExpandedMobile(!areFiltersExpandedMobile)}
+      >
+        {areFiltersExpandedMobile ? 'Hide' : 'Show'} filters
+      </button>
+      </div>
+      <div className={`filter-button-group ${!areFiltersExpandedMobile && 'hide'}`}>
       {filters.map(filter =>(
         <button className="filter-button" key={filter.filterValue} onClick={() => setSortMode(filter.filterValue)} style={{backgroundColor: sortMode === filter.filterValue ? 'cyan' : 'yellow'}}>{filter.displayName}</button>
       ))}
