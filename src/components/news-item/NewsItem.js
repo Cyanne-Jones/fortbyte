@@ -26,7 +26,7 @@ const NewsItem = ({item}) => {
         </p>
         <img className="news-image" 
           src={item.image} 
-          alt="news image"
+          alt="news item"
         />
       </div>
     </div>
