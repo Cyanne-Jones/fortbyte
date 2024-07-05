@@ -30,11 +30,11 @@ function App() {
             const newShopItem = {
               name:item.name,
               id: item.id,
-              description: item.description,
-              type: item.type.displayValue,
+              description: item?.description,
+              type: item.type?.displayValue,
               price: entry.finalPrice,
-              introduction: item.introduction.text,
-              rarity: item.rarity.displayValue,
+              introduction: item.introduction?.text,
+              rarity: item.rarity?.displayValue,
               image: item.images.featured || item.images.icon,
               bundleName: entry.bundle?.name || 'solo',
             };
@@ -45,7 +45,8 @@ function App() {
       })
       .catch(error => {
         setError(error)
-        console.log(`%c You have an error: ${error}`, "color: #C71585; font-size: 20px; font-family: cursive;")
+        console.log(`%c You 🫵🏼 have an error 😱`, "color: #C71585; font-size: 20px; font-family: cursive;")
+        console.log(`%c ${error}`, "color: cyan;")
       })
   }, []);
 
