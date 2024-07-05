@@ -45,7 +45,8 @@ function App() {
       })
       .catch(error => {
         setError(error)
-        console.log(`%c You have an error: ${error}`, "color: #C71585; font-size: 20px; font-family: cursive;")
+        console.log(`%c You 🫵🏼 have an error 😱`, "color: #C71585; font-size: 20px; font-family: cursive;")
+        console.log(`%c ${error}`, "color: cyan;")
       })
   }, []);
 
