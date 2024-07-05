@@ -30,11 +30,11 @@ function App() {
             const newShopItem = {
               name:item.name,
               id: item.id,
-              description: item.description,
-              type: item.type.displayValue,
+              description: item?.description,
+              type: item.type?.displayValue,
               price: entry.finalPrice,
-              introduction: item.introduction.text,
-              rarity: item.rarity.displayValue,
+              introduction: item.introduction?.text,
+              rarity: item.rarity?.displayValue,
               image: item.images.featured || item.images.icon,
               bundleName: entry.bundle?.name || 'solo',
             };
