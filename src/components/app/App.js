@@ -36,8 +36,9 @@ function App() {
               price: entry.finalPrice,
               introduction: item.introduction.text,
               rarity: item.rarity.displayValue,
-              image: item.images.featured || item.images.icon,
+              image: item.images.featured || item.images.icon || item.images.smallIcon,
               bundleName: entry.bundle?.name || 'solo',
+              set: item.set?.text || ''
             }
             shopItems.push(newShopItem);
           })
