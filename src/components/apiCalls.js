@@ -5,7 +5,7 @@ const fetchData = (url) => {
       return res.json()
     } else {
       console.log('response', res)
-      throw new Error("Error fetching data")
+      throw new Error(`Error fetching data from ${url}`);
     }
   });
 };

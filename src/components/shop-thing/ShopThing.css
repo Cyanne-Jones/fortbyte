@@ -1,5 +1,5 @@
 .shop-thing {
-  height: 17rem;
+  min-height: 17rem;
   width: 20rem;
   display: flex;
   flex-direction: column;
@@ -24,6 +24,16 @@
   align-items: center;
 }
 
+.price {
+  display: flex;
+  align-items: center;
+}
+
+.price-and-set {
+  align-items: center;
+  color: #022874;
+}
+
 .item-image,
 .item-price,
 .v-buck {
@@ -39,6 +49,7 @@
 .description {
   margin-top: 0px;
   color: #022874;
+  font-style: italic;
 }
 
 .item-price {
@@ -65,6 +76,14 @@
 
 .legendary {
   background: linear-gradient(#ff7b02, #ffe503);
+}
+
+.icon {
+  background: linear-gradient(#025253ff, #5cf2f3ff);
+}
+
+.gaming-legends-series {
+  background: linear-gradient(#28085fff, #8078ffff);
 }
 
 .v-buck {

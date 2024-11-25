@@ -38,6 +38,10 @@ const ItemShop = () => {
     {
       displayName: 'Glider',
       filterValue: 'Glider'
+    },
+    {
+      displayName: 'Emoticons',
+      filterValue: 'Emoticon'
     }
   ]
 
