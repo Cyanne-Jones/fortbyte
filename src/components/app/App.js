@@ -21,26 +21,27 @@ function App() {
     })
     .catch(error => setError(error));
 
-    fetchData("https://fortnite-api.com/v2/shop/br")
+    fetchData("https://fortnite-api.com/v2/shop")
       .then(res => {
         const shopItems = [];
-        
-        res.data.featured.entries.forEach(entry => {
-          entry.items.forEach(item => {
+
+        res.data.entries.forEach( entry => {
+          if (!entry.brItems) return;
+          entry.brItems.forEach(item => {
             const newShopItem = {
-              name:item.name,
+              name: item.name,
               id: item.id,
-              description: item?.description,
-              type: item.type?.displayValue,
+              description: item.description,
+              type: item.type.displayValue,
               price: entry.finalPrice,
-              introduction: item.introduction?.text,
-              rarity: item.rarity?.displayValue,
+              introduction: item.introduction.text,
+              rarity: item.rarity.displayValue,
               image: item.images.featured || item.images.icon,
               bundleName: entry.bundle?.name || 'solo',
-            };
-            shopItems.push(newShopItem)
+            }
+            shopItems.push(newShopItem);
           })
-        });
+        })
         setShopItems(shopItems);
       })
       .catch(error => {
@@ -48,7 +49,7 @@ function App() {
         console.log(`%c You 🫵🏼 have an error 😱`, "color: #C71585; font-size: 20px; font-family: cursive;")
         console.log(`%c ${error}`, "color: cyan;")
       })
-  }, []);
+  }, [ setNewsItems, setShopItems ]);
 
   return (
     <div className="App">
