@@ -1,5 +1,5 @@
 .shop-thing {
-  height: 17rem;
+  min-height: 17rem;
   width: 20rem;
   display: flex;
   flex-direction: column;
