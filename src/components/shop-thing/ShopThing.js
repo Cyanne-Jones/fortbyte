@@ -6,7 +6,14 @@ import PropTypes from 'prop-types';
 const ShopThing = ({item}) => {
 
   const formatRarityClassName = (rarity) => {
-    if ( rarity === 'Gaming Legends Series') return 'gaming-legends-series';
+    const allowedRarities = [
+      'Uncommon',
+      'Rare',
+      'Epic',
+      'Legendary',
+      'Icon',
+    ];
+    if ( !allowedRarities.includes(rarity)) return 'other';
     return rarity.toLowerCase();
   }
   

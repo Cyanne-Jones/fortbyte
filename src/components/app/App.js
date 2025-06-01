@@ -28,13 +28,14 @@ function App() {
         res.data.entries.forEach( entry => {
           if (!entry.brItems) return;
           entry.brItems.forEach(item => {
+            if (!entry.brItems || entry.brItems.length === 0) return;
             const newShopItem = {
               name: item.name,
               id: item.id,
               description: item.description,
               type: item.type.displayValue,
               price: entry.finalPrice,
-              introduction: item.introduction.text,
+              introduction: item.introduction?.text,
               rarity: item.rarity.displayValue,
               image: item.images.featured || item.images.icon || item.images.smallIcon,
               bundleName: entry.bundle?.name || 'solo',
