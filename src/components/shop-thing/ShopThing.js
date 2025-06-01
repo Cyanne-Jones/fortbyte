@@ -7,6 +7,7 @@ const ShopThing = ({item}) => {
 
   const formatRarityClassName = (rarity) => {
     if ( rarity === 'Gaming Legends Series') return 'gaming-legends-series';
+    if ( rarity === 'Star Wars Series') return 'star-wars-series';
     return rarity.toLowerCase();
   }
   
