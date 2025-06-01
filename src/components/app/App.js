@@ -21,12 +21,13 @@ function App() {
     })
     .catch(error => setError(error));
 
-    fetchData("https://fortnite-api.com/v2/shop/br")
+    fetchData("https://fortnite-api.com/v2/shop/")
       .then(res => {
         const shopItems = [];
         
-        res.data.featured.entries.forEach(entry => {
-          entry.items.forEach(item => {
+        res.data.entries.forEach(entry => {
+          if (!entry.brItems || entry.brItems.length === 0) return; // Skip if no items
+          entry.brItems.forEach(item => {
             const newShopItem = {
               name:item.name,
               id: item.id,
